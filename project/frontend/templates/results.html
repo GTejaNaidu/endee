@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f7f6; margin: 0; padding: 2rem; }
+        .container { max-width: 800px; margin: 0 auto; }
+        header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; }
+        h1 { color: #333; }
+        .back-btn { text-decoration: none; color: #007bff; font-weight: bold; }
+        
+        .rag-box { background-color: #fff; padding: 1.5rem; border-radius: 8px; border-left: 5px solid #6f42c1; margin-bottom: 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .rag-title { font-weight: bold; color: #6f42c1; font-size: 1.1rem; margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.5rem; }
+        .rag-text { line-height: 1.6; color: #444; font-size: 1.05rem; }
+
+        .results-list { display: flex; flex-direction: column; gap: 1rem; }
+        .card { background-color: #fff; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.2s, box-shadow 0.2s; border: 1px solid #eee; }
+        .card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.12); }
+        .best-match { border: 2px solid #28a745; background-color: #f8fff9; box-shadow: 0 4px 15px rgba(40, 167, 69, 0.15); }
+        
+        .card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; padding-bottom: 0.8rem; border-bottom: 1px solid #f0f0f0; }
+        .candidate-header-left { display: flex; align-items: center; gap: 0.8rem; }
+        
+        .rank-number { font-size: 1rem; font-weight: bold; color: #888; background: #eee; padding: 0.2rem 0.6rem; border-radius: 4px; }
+        .best-match .rank-number { background: #28a745; color: white; }
+        
+        .candidate-name { font-size: 1.3rem; font-weight: bold; color: #333; }
+        .crown-icon { font-size: 1.2rem; }
+        
+        .score { background: linear-gradient(135deg, #28a745, #20c997); color: white; padding: 0.4rem 0.8rem; border-radius: 20px; font-size: 1rem; font-weight: bold; box-shadow: 0 2px 4px rgba(40,167,69,0.3); }
+        .preview { color: #555; line-height: 1.5; font-size: 0.95rem; }
+        mark { background-color: #ffeeba; color: #856404; padding: 0.1em 0.3em; border-radius: 3px; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Search: "{{ query }}"</h1>
+            <a href="/" class="back-btn">← New Search</a>
+        </header>
+
+        {% if justification %}
+        <div class="rag-box">
+            <div class="rag-title">💡 AI Match Explanation</div>
+            <div class="rag-text">{{ justification }}</div>
+        </div>
+        {% endif %}
+
+        <div class="results-list">
+            {% for res in results %}
+            <div class="card {% if loop.index == 1 %}best-match{% endif %}">
+                <div class="card-header">
+                    <div class="candidate-header-left">
+                        <span class="rank-number">#{{ loop.index }}</span>
+                        <span class="candidate-name">{{ res.candidate_name }}</span>
+                        {% if loop.index == 1 %}
+                        <span class="crown-icon" title="Top Match">👑</span>
+                        {% endif %}
+                    </div>
+                    <div class="score">{{ res.match_percentage }}</div>
+                </div>
+                <div class="preview">"{{ res.text_preview | safe }}"</div>
+            </div>
+            {% else %}
+            <p>No suitable candidates found.</p>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

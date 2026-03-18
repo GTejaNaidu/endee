@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Successful</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f7f6; margin: 0; padding: 0; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
+        .container { background-color: #fff; padding: 2.5rem; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); width: 100%; max-width: 450px; text-align: center; }
+        .icon { font-size: 4rem; margin-bottom: 1rem; }
+        h1 { color: #28a745; margin-bottom: 1rem; }
+        p { color: #666; margin-bottom: 2rem; line-height: 1.6; }
+        .filename { font-weight: bold; color: #333; display: block; margin-top: 0.5rem; }
+        .btn { display: inline-block; background-color: #007bff; color: white; padding: 0.8rem 2rem; border-radius: 6px; text-decoration: none; font-weight: bold; transition: background-color 0.3s; }
+        .btn:hover { background-color: #0056b3; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="icon">✅</div>
+        <h1>Success!</h1>
+        <p>Your resume has been processed and indexed into the Endee Vector Database.
+            <span class="filename">{{ filename }}</span>
+        </p>
+        <a href="/" class="btn">Back to Search</a>
+    </div>
+</body>
+</html>
