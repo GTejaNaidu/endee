@@ -60,13 +60,13 @@ Traditional systems rely on **keyword matching**, which fails when different ter
 graph TD
     User[Recruiter / User] -->|1. Request| Frontend[Flask Frontend]
     Frontend -->|2. Search/Match Request| Backend[FastAPI Backend]
-    Backend -->|3. Text → Vector| Embed[embeddings.py <br/> (all-MiniLM-L6-v2)]
+    Backend -->|3. Text → Vector| Embed["embeddings.py <br/> (all-MiniLM-L6-v2)"]
     Embed -->|4a. Check Connection| DB[database.py]
     DB -->|5. Vector Search| Endee[Endee Vector Database]
     DB -.->|Fallback| NumPy[NumPy In-Memory Store]
-    Endee -->|6. Results| Logic[logic.py <br/> (Score Calibration)]
+    Endee -->|6. Results| Logic["logic.py <br/> (Score Calibration)"]
     NumPy -->|6. Results| Logic
-    Logic -->|7. Generate Explanation| RAG[rag.py <br/> (Lightweight RAG)]
+    Logic -->|7. Generate Explanation| RAG["rag.py <br/> (Lightweight RAG)"]
     RAG -->|8. Formatted Response| Backend
     Backend -->|9. JSON Response| Frontend
     Frontend -->|10. UI Update| User
