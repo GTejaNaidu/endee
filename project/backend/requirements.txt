@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+sentence-transformers
+# endee-client (Commented out as it's not on PyPI; using direct REST integration)
+python-multipart
+numpy
+requests
+msgpack
+flask
+PyPDF2

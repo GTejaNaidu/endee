@@ -1,0 +1,43 @@
+G TEJA 
+gtejanaidu.info@gmail.com | (+91) 9686555926 | GitHub | LinkedIn | Bengaluru 
+SKILLS 
+• Programming: Python, Java, OOPs, Data structures and Algorithms 
+• Machine Learning: CNN Models, Image Processing, AI Model Integration, TensorFlow 
+• Databases: SQL, MongoDB, PostgreSQL 
+• Core CS: Operating Systems, DBMS, Computer Networks 
+• Frontend: React, HTML, CSS, JavaScript 
+• Cross Platform: React Native, Expo 
+• APIs & Tools: REST APIs, GitHub, Postman 
+PROJECTS 
+• PneumoDetect 
+o Developed CNN model using TensorFlow and Keras to detect pneumonia from X-ray images. 
+o Implemented image preprocessing and deployed model via web interface. 
+• ScanGluco (AI-Powered Glucose Monitoring & Patient Management System) 
+o Developed a full-stack healthcare application to detect glucose readings and manage patient records. 
+o Built backend logic and APIs using Python with secure role-based access. 
+o Designed dashboards, alerts, and analytics to improve monitoring efficiency. 
+o Implemented database storage and reporting features. 
+• Cradlytic 
+o Built full-stack web application using React, Node.js, Express, and MongoDB. 
+o Implemented recommendation logic and optimized database queries. 
+o Designed responsive UI for seamless user experience. 
+• Recipe App 
+o Developed cross-platform mobile app using React Native and Expo. 
+o Built backend APIs using Express.js with PostgreSQL database integration. 
+o Implemented authentication and scalable data storage. 
+WORK EXPERIENCE   
+• ARS Caterers Website — Freelance project for a catering business built using React.js and Vite to create a highly 
+interactive 3D-style interface. [link] 
+• Software Development Intern - Campus to Corporate  
+TAP Academy, Bengaluru (Jan 2026 – Present) 
+EDUCATION 
+• APS College of Engineering, Bengaluru (Dec 2022 – June 2026) 
+B.E in Information Science and Engineering | Current GPA: 8.16/10.0 
+CERTIFICATES 
+• Full Stack Development 
+o Developed end-to-end web applications by working with modern frontend and backend technologies. 
+• MERN Stack Development 
+o Built full-stack web applications using MongoDB, Express.js, React, and Node.js through hands-on projects. 
+• Data Analytics Job Simulation 
+o Applied data analysis and forensic techniques to solve real-world business problems in a consulting-style 
+environment. 
